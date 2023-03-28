@@ -1,0 +1,114 @@
+body {
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #44475a;
+    background-color: #f8f8f2;
+
+
+}
+
+.hero {
+    text-align: center;
+    padding: 0 50px;
+    margin: 0;
+}
+
+
+
+.progressBarContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    margin: 0;
+}
+
+.progress {
+    flex: 10 1 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.pBShrink {
+    flex: 1 2 auto;
+}
+
+.coinInfo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-bottom: -15px; */
+}
+
+.coinName {
+    margin-left: 10px;
+}
+
+.coinIcon {
+    width: 30px;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.coinInfo p {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: auto;
+}
+
+.athOnStatusBar {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: end;
+    margin: 0;
+}
+
+
+
+.statusBar {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: #cfcfc8;
+    border-radius: 5x;
+}
+
+@keyframes growFromLeft {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.status-bar-fill {
+    transform-origin: 0% 50%;
+    transform: cubic-bezier(.32, 0, .07, 1);
+    animation: 0.69s growFromLeft;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    background-color: #44475a;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 0px;
+}
+
+.status-bar-fill:hover {
+    background-color: gold;
+
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    /* margin: 10px; */
+}

@@ -5,11 +5,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto ATH tracker</title>
+    <title>Crypto ATH Tracker</title>
+    <meta name="description" content="A site that tracks cryptos' all time high prices">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+
 </head>
 
 <body>
-
+    <div class="hero">
+        <h1 style="font-size: 70px;">Crypto ATH Tracker</h1>
+        <h2 style="font-size: 25px;">A site that tracks the all time high price of cryptos and the distances
+            between them.</h2>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="btcIcon" class="coinIcon" src="">
+                <h2 class="coinName">Bitcoin</h2>
+                <p>Current Price:<span id="btc-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="btcAth"></p>
+            <div class="btc-status-bar statusBar">
+                <div class="btc-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="ethIcon" class="coinIcon" src="">
+                <h2 class="coinName">Ethereum</h2>
+                <p>Current Price:<span id="eth-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="ethAth"> </p>
+            <div class="eth-status-bar statusBar">
+                <div class="eth-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="bnbIcon" class="coinIcon" src="">
+                <h2 class="coinName">BNB</h2>
+                <p>Current Price:<span id="bnb-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="bnbAth"> </p>
+            <div class="bnb-status-bar statusBar">
+                <div class="bnb-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="xrpIcon" class="coinIcon" src="">
+                <h2 class="coinName">XRP</h2>
+                <p>Current Price:<span id="xrp-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="xrpAth"> </p>
+            <div class="xrp-status-bar statusBar">
+                <div class="xrp-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="dogeIcon" class="coinIcon" src="">
+                <h2 class="coinName">Dogecoin</h2>
+                <p>Current Price:<span id="doge-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="dogeAth"> </p>
+            <div class="doge-status-bar statusBar">
+                <div class="doge-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="adaIcon" class="coinIcon" src="">
+                <h2 class="coinName">Cardano</h2>
+                <p>Current Price:<span id="ada-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="adaAth"> </p>
+            <div class="ada-status-bar statusBar">
+                <div class="ada-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <div class="progressBarContainer">
+        <div class="pBShrink"></div>
+        <div class="progress">
+            <div class="coinInfo">
+                <img id="solIcon" class="coinIcon" src="">
+                <h2 class="coinName">Solana</h2>
+                <p>Current Price:<span id="sol-status-price"></span></p>
+            </div>
+            <p class="athOnStatusBar" id="solAth"> </p>
+            <div class="sol-status-bar statusBar">
+                <div class="sol-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </div>
+        <div class="pBShrink"></div>
+    </div>
+    <footer>@19798eth<br>Data provided by free tier CoinGecko api so the data is not very responsive and suffers from
+        limited rate.</footer>
 </body>
+
 
 </html>
