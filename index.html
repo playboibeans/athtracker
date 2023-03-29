@@ -20,6 +20,7 @@
     <meta name="description" content="A site that tracks cryptos' all time high prices">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -47,7 +48,10 @@
                             <img id="btcIcon" class="coinIcon" src="">
                             <h2 id="btcName"></h2>
                         </div>
-                        <p id="btc-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="btc-status-price" class="currentPrice"></p>
+                            <p id="btc-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="btcAth"></p>
                     <div class="btc-status-bar statusBar">
@@ -61,7 +65,10 @@
                             <img id="ethIcon" class="coinIcon" src="">
                             <h2 id="ethName"></h2>
                         </div>
-                        <p id="eth-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="eth-status-price" class="currentPrice"></p>
+                            <p id="eth-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="ethAth"></p>
                     <div class="eth-status-bar statusBar">
@@ -75,7 +82,10 @@
                             <img id="bnbIcon" class="coinIcon" src="">
                             <h2 id="bnbName"></h2>
                         </div>
-                        <p id="bnb-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="bnb-status-price" class="currentPrice"></p>
+                            <p id="bnb-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="bnbAth"></p>
                     <div class="bnb-status-bar statusBar">
@@ -89,7 +99,10 @@
                             <img id="xrpIcon" class="coinIcon" src="">
                             <h2 id="xrpName"></h2>
                         </div>
-                        <p id="xrp-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="xrp-status-price" class="currentPrice"></p>
+                            <p id="xrp-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="xrpAth"></p>
                     <div class="xrp-status-bar statusBar">
@@ -103,7 +116,10 @@
                             <img id="maticIcon" class="coinIcon" src="">
                             <h2 id="maticName"></h2>
                         </div>
-                        <p id="matic-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="matic-status-price" class="currentPrice"></p>
+                            <p id="matic-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="maticAth"></p>
                     <div class="matic-status-bar statusBar">
@@ -117,7 +133,10 @@
                             <img id="ltcIcon" class="coinIcon" src="">
                             <h2 id="ltcName"></h2>
                         </div>
-                        <p id="ltc-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="ltc-status-price" class="currentPrice"></p>
+                            <p id="ltc-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="ltcAth"></p>
                     <div class="ltc-status-bar statusBar">
@@ -133,7 +152,10 @@
                             <img id="dogeIcon" class="coinIcon" src="">
                             <h2 id="dogeName"></h2>
                         </div>
-                        <p id="doge-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="doge-status-price" class="currentPrice"></p>
+                            <p id="doge-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="dogeAth"></p>
                     <div class="doge-status-bar statusBar">
@@ -147,7 +169,10 @@
                             <img id="adaIcon" class="coinIcon" src="">
                             <h2 id="adaName"></h2>
                         </div>
-                        <p id="ada-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="ada-status-price" class="currentPrice"></p>
+                            <p id="ada-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="adaAth"></p>
                     <div class="ada-status-bar statusBar">
@@ -161,7 +186,10 @@
                             <img id="solIcon" class="coinIcon" src="">
                             <h2 id="solName"></h2>
                         </div>
-                        <p id="sol-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="sol-status-price" class="currentPrice"></p>
+                            <p id="sol-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="solAth"></p>
                     <div class="sol-status-bar statusBar">
@@ -175,7 +203,10 @@
                             <img id="shibIcon" class="coinIcon" src="">
                             <h2 id="shibName"></h2>
                         </div>
-                        <p id="shib-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="shib-status-price" class="currentPrice"></p>
+                            <p id="shib-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="shibAth"></p>
                     <div class="shib-status-bar statusBar">
@@ -189,7 +220,10 @@
                             <img id="dotIcon" class="coinIcon" src="">
                             <h2 id="dotName"></h2>
                         </div>
-                        <p id="dot-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="dot-status-price" class="currentPrice"></p>
+                            <p id="dot-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="dotAth"></p>
                     <div class="dot-status-bar statusBar">
@@ -203,7 +237,10 @@
                             <img id="avaxIcon" class="coinIcon" src="">
                             <h2 id="avaxName"></h2>
                         </div>
-                        <p id="avax-status-price"></p>
+                        <div class="priceAndPercent">
+                            <p id="avax-status-price" class="currentPrice"></p>
+                            <p id="avax-percent" class="percent"></p>
+                        </div>
                     </div>
                     <p class="athOnStatusBar" id="avaxAth"></p>
                     <div class="avax-status-bar statusBar">

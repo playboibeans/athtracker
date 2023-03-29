@@ -38,7 +38,7 @@ header {
 .barArea {
     display: flex;
     justify-content: space-evenly;
-    padding: 25px;
+    padding: 50px;
     gap: 25px;
     flex-wrap: wrap;
 }
@@ -63,12 +63,26 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 }
 
 .iconAndName {
     display: flex;
-    align-items: center;
+    align-items: end;
+}
+
+.iconAndName h2 {
+    margin-left: 10px;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.priceAndPercent {
+    margin-left: auto;
+}
+
+.priceAndPercent p {
+    margin: 0;
 }
 
 .coinIcon {
@@ -77,20 +91,24 @@ header {
     margin-bottom: 0;
 }
 
-.coinInfo h2 {
-    margin-left: 10px;
+
+.currentPrice,
+.percent {
+    font-weight: 900;
+    text-align: right;
 }
 
+.currentPrice {
+    font-size: 36px;
+    color: #ff79c6;
+}
 
-
-.coinInfo p {
+.percent {
     font-size: 20px;
-    font-weight: 900;
-    margin-left: auto;
 }
 
 .athOnStatusBar {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 900;
     text-align: end;
     margin: 0;
@@ -103,8 +121,10 @@ header {
     position: relative;
     height: 30px;
     width: 100%;
-    background-color: #cfcfc8;
+    /* background-color: #cfcfc8; */
+    background-color: #44475a;
     border-radius: 25px;
+    border: 2px solid #f8f8f2
 }
 
 
@@ -127,7 +147,7 @@ header {
     position: absolute;
     height: 100%;
     /* width: auto; */
-    background-color: #ff5555;
+    background-color: #ff79c6;
     border-radius: 25px;
     /* border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
