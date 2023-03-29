@@ -6,6 +6,11 @@ window.addEventListener('load', function () {
     dogePrice();
     adaPrice();
     solPrice();
+    shibPrice();
+    maticPrice();
+    ltcPrice();
+    dotPrice();
+    avaxPrice()
 
     // Check if user has set the dark mode preference
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -30,9 +35,11 @@ function logoRotate() {
 }
 
 
-function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, priceID, athID) {
+function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, priceID, athID, coinName) {
     axios.get(`https://api.coingecko.com/api/v3/coins/${coin}`)
         .then((price) => {
+            const nameOfCoin = price.data.name;
+            document.getElementById(coinName).innerHTML = `${nameOfCoin}`;
             const crypto = price.data.market_data.current_price.usd;
             const crypto_ATH = price.data.market_data.ath.usd;
             const icon = price.data.image.large;
@@ -51,32 +58,53 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
 }
 
 function btcPrice() {
-    fetchCryptoPrice('bitcoin', 'btcIcon', 'btc-status-bar', 'btc-status-bar-fill', 'btc-status-price', 'btcAth');
+    fetchCryptoPrice('bitcoin', 'btcIcon', 'btc-status-bar', 'btc-status-bar-fill', 'btc-status-price', 'btcAth', 'btcName');
 }
 
 function ethPrice() {
-    fetchCryptoPrice('ethereum', 'ethIcon', 'eth-status-bar', 'eth-status-bar-fill', 'eth-status-price', 'ethAth');
+    fetchCryptoPrice('ethereum', 'ethIcon', 'eth-status-bar', 'eth-status-bar-fill', 'eth-status-price', 'ethAth', 'ethName');
 }
 
 function bnbPrice() {
-    fetchCryptoPrice('binancecoin', 'bnbIcon', 'bnb-status-bar', 'bnb-status-bar-fill', 'bnb-status-price', 'bnbAth');
+    fetchCryptoPrice('binancecoin', 'bnbIcon', 'bnb-status-bar', 'bnb-status-bar-fill', 'bnb-status-price', 'bnbAth', 'bnbName');
 }
 
 function xrpPrice() {
-    fetchCryptoPrice('ripple', 'xrpIcon', 'xrp-status-bar', 'xrp-status-bar-fill', 'xrp-status-price', 'xrpAth');
+    fetchCryptoPrice('ripple', 'xrpIcon', 'xrp-status-bar', 'xrp-status-bar-fill', 'xrp-status-price', 'xrpAth', 'xrpName');
 }
 
 function dogePrice() {
-    fetchCryptoPrice('dogecoin', 'dogeIcon', 'doge-status-bar', 'doge-status-bar-fill', 'doge-status-price', 'dogeAth');
+    fetchCryptoPrice('dogecoin', 'dogeIcon', 'doge-status-bar', 'doge-status-bar-fill', 'doge-status-price', 'dogeAth', 'dogeName');
 }
 
 function adaPrice() {
-    fetchCryptoPrice('cardano', 'adaIcon', 'ada-status-bar', 'ada-status-bar-fill', 'ada-status-price', 'adaAth');
+    fetchCryptoPrice('cardano', 'adaIcon', 'ada-status-bar', 'ada-status-bar-fill', 'ada-status-price', 'adaAth', 'adaName');
 }
 
 function solPrice() {
-    fetchCryptoPrice('solana', 'solIcon', 'sol-status-bar', 'sol-status-bar-fill', 'sol-status-price', 'solAth');
+    fetchCryptoPrice('solana', 'solIcon', 'sol-status-bar', 'sol-status-bar-fill', 'sol-status-price', 'solAth', 'solName');
 }
+
+function shibPrice() {
+    fetchCryptoPrice('shiba-inu', 'shibIcon', 'shib-status-bar', 'shib-status-bar-fill', 'shib-status-price', 'shibAth', 'shibName');
+}
+
+function maticPrice() {
+    fetchCryptoPrice('matic-network', 'maticIcon', 'matic-status-bar', 'matic-status-bar-fill', 'matic-status-price', 'maticAth', 'maticName');
+}
+
+function ltcPrice() {
+    fetchCryptoPrice('litecoin', 'ltcIcon', 'ltc-status-bar', 'ltc-status-bar-fill', 'ltc-status-price', 'ltcAth', 'ltcName');
+}
+
+function dotPrice() {
+    fetchCryptoPrice('polkadot', 'dotIcon', 'dot-status-bar', 'dot-status-bar-fill', 'dot-status-price', 'dotAth', 'dotName');
+}
+
+function avaxPrice() {
+    fetchCryptoPrice('avalanche-2', 'avaxIcon', 'avax-status-bar', 'avax-status-bar-fill', 'avax-status-price', 'avaxAth', 'avaxName');
+}
+
 
 
 
