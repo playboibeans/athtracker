@@ -34,108 +34,110 @@
 
         <img src="idea.png" onclick="switchMode()" id="darkmodeSwitch" style="height: 40px;">
     </header>
-    <div class="hero">
-        <img src="favicon/android-chrome-192x192.png" onclick="logoRotate()" id="logo" style="height: 100px;">
-        <h1 style="font-size: 70px;">Crypto ATH Tracker</h1>
-        <h2 style="font-size: 25px;">A site that tracks the all time high price of cryptos and the distances
-            between them.</h2>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="btcIcon" class="coinIcon" src="">
-                <h2 class="coinName">Bitcoin</h2>
-                <p><span id="btc-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="btcAth"></p>
-            <div class="btc-status-bar statusBar">
-                <div class="btc-status-bar-fill status-bar-fill">
+    <div class="contents">
+        <div class="hero">
+            <img src="favicon/android-chrome-192x192.png" onclick="logoRotate()" id="logo" style="height: 100px;">
+            <h1 style="font-size: 70px;">Crypto ATH Tracker</h1>
+            <h2 style="font-size: 25px;">A site that tracks the all time high price of cryptos and the distances
+                between them.</h2>
+        </div>
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="btcIcon" class="coinIcon" src="">
+                    <h2 class="coinName">Bitcoin</h2>
+                    <p><span id="btc-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="btcAth"></p>
+                <div class="btc-status-bar statusBar">
+                    <div class="btc-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="pBShrink"></div>
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="ethIcon" class="coinIcon" src="">
-                <h2 class="coinName">Ethereum</h2>
-                <p><span id="eth-status-price"></span></p>
+        <div class="progressBarContainer">
+            <div class="pBShrink"></div>
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="ethIcon" class="coinIcon" src="">
+                    <h2 class="coinName">Ethereum</h2>
+                    <p><span id="eth-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="ethAth"></p>
+                <div class="eth-status-bar statusBar">
+                    <div class="eth-status-bar-fill status-bar-fill">
+                    </div>
+                </div>
             </div>
-            <p class="athOnStatusBar" id="ethAth"></p>
-            <div class="eth-status-bar statusBar">
-                <div class="eth-status-bar-fill status-bar-fill">
+            <div class="pBShrink"></div>
+        </div>
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="bnbIcon" class="coinIcon" src="">
+                    <h2 class="coinName">BNB</h2>
+                    <p><span id="bnb-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="bnbAth"></p>
+                <div class="bnb-status-bar statusBar">
+                    <div class="bnb-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="pBShrink"></div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="bnbIcon" class="coinIcon" src="">
-                <h2 class="coinName">BNB</h2>
-                <p><span id="bnb-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="bnbAth"></p>
-            <div class="bnb-status-bar statusBar">
-                <div class="bnb-status-bar-fill status-bar-fill">
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="xrpIcon" class="coinIcon" src="">
+                    <h2 class="coinName">XRP</h2>
+                    <p><span id="xrp-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="xrpAth"></p>
+                <div class="xrp-status-bar statusBar">
+                    <div class="xrp-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="xrpIcon" class="coinIcon" src="">
-                <h2 class="coinName">XRP</h2>
-                <p><span id="xrp-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="xrpAth"></p>
-            <div class="xrp-status-bar statusBar">
-                <div class="xrp-status-bar-fill status-bar-fill">
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="dogeIcon" class="coinIcon" src="">
+                    <h2 class="coinName">Dogecoin</h2>
+                    <p><span id="doge-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="dogeAth"></p>
+                <div class="doge-status-bar statusBar">
+                    <div class="doge-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="dogeIcon" class="coinIcon" src="">
-                <h2 class="coinName">Dogecoin</h2>
-                <p><span id="doge-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="dogeAth"></p>
-            <div class="doge-status-bar statusBar">
-                <div class="doge-status-bar-fill status-bar-fill">
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="adaIcon" class="coinIcon" src="">
+                    <h2 class="coinName">Cardano</h2>
+                    <p><span id="ada-status-price"></span></p>
+                </div>
+                <p class="athOnStatusBar" id="adaAth"></p>
+                <div class="ada-status-bar statusBar">
+                    <div class="ada-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="adaIcon" class="coinIcon" src="">
-                <h2 class="coinName">Cardano</h2>
-                <p><span id="ada-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="adaAth"></p>
-            <div class="ada-status-bar statusBar">
-                <div class="ada-status-bar-fill status-bar-fill">
+        <div class="progressBarContainer">
+            <div class="progress">
+                <div class="coinInfo">
+                    <img id="solIcon" class="coinIcon" src="">
+                    <h2 class="coinName">Solana</h2>
+                    <p><span id="sol-status-price"></span></p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="progressBarContainer">
-        <div class="progress">
-            <div class="coinInfo">
-                <img id="solIcon" class="coinIcon" src="">
-                <h2 class="coinName">Solana</h2>
-                <p><span id="sol-status-price"></span></p>
-            </div>
-            <p class="athOnStatusBar" id="solAth"></p>
-            <div class="sol-status-bar statusBar">
-                <div class="sol-status-bar-fill status-bar-fill">
+                <p class="athOnStatusBar" id="solAth"></p>
+                <div class="sol-status-bar statusBar">
+                    <div class="sol-status-bar-fill status-bar-fill">
+                    </div>
                 </div>
             </div>
         </div>

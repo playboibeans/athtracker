@@ -25,11 +25,13 @@ header {
     background-color: #f8f8f2;
 }
 
-
+.contents {
+    padding: 0 50px;
+}
 
 .hero {
     text-align: center;
-    padding: 0 50px;
+    padding: 0;
     margin: 0;
 }
 
@@ -38,13 +40,13 @@ header {
 .progressBarContainer {
     display: flex;
     align-items: center;
-    padding: 0 10 px;
+    padding: 0;
     margin: 0;
 }
 
 .progress {
     flex: 1 1 auto;
-    padding: 50px 50px;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
 }
@@ -137,8 +139,6 @@ header {
 
 .status-bar-fill:hover {
     background-color: #f1fa8c;
-
-
 }
 
 footer {
