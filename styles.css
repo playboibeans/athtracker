@@ -74,6 +74,7 @@ header {
     font-size: 20px;
     font-weight: 900;
     margin-left: 20px;
+    /* color: #50fa7b; */
 }
 
 .athOnStatusBar {
@@ -91,7 +92,7 @@ header {
     height: 30px;
     width: 100%;
     background-color: #cfcfc8;
-    border-radius: 5px;
+    border-radius: 25px;
     display: flex;
 }
 
@@ -117,24 +118,28 @@ header {
     width: auto;
     /* margin: -5px; */
     background-color: #ff5555;
-
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 25px;
+    /* border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     border-top-right-radius: 100px;
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
 }
 
 .logo-rotate {
     transform: rotate(180deg);
 }
 
+
 #logo:active {
     translate: 5px;
 }
 
 
+
+
 .status-bar-fill:hover {
     background-color: #f1fa8c;
+
 
 }
 
