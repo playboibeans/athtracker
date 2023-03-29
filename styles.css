@@ -96,6 +96,7 @@ header {
     width: 100%;
     background-color: #cfcfc8;
     border-radius: 5px;
+    display: flex;
 }
 
 
@@ -118,6 +119,7 @@ header {
     position: absolute;
     height: 100%;
     width: auto;
+    /* margin: -5px; */
     background-color: #44475a;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
