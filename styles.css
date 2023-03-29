@@ -63,25 +63,30 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
-.coinInfo h2 {
-    margin-left: 10px;
+.iconAndName {
+    display: flex;
+    align-items: center;
 }
 
 .coinIcon {
     width: 30px;
     border-radius: 50%;
     margin-bottom: 0;
-
 }
+
+.coinInfo h2 {
+    margin-left: 10px;
+}
+
+
 
 .coinInfo p {
     font-size: 20px;
     font-weight: 900;
     margin-left: auto;
-    flex-wrap: wrap;
-
 }
 
 .athOnStatusBar {
