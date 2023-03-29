@@ -63,7 +63,7 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 100px;
 }
 
 .iconAndName {
@@ -122,9 +122,9 @@ header {
     height: 30px;
     width: 100%;
     /* background-color: #cfcfc8; */
-    background-color: #44475a;
+    background-color: transparent;
     border-radius: 25px;
-    border: 2px solid #f8f8f2
+    border: 5px solid #bd93f9
 }
 
 
@@ -147,7 +147,7 @@ header {
     position: absolute;
     height: 100%;
     /* width: auto; */
-    background-color: #ff79c6;
+    background-color: #bd93f9;
     border-radius: 25px;
     /* border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;

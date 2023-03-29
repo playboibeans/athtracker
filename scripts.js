@@ -50,7 +50,7 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
             const athPercentString = `${(athPercentComplete * 100).toFixed(2)}% `;
             document.getElementById(priceID).innerHTML = `$${crypto.toLocaleString()}`;
             document.getElementById(percentID).innerHTML = `${(athPercentComplete * 100).toFixed(2)}%`;
-            document.getElementById(athID).innerHTML = `$${crypto_ATH.toLocaleString()} `;
+            document.getElementById(athID).innerHTML = `ATH:$${crypto_ATH.toLocaleString()} `;
             athStatusBarFill.style.width = athPercentString;
         })
         .catch(error => {
