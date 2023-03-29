@@ -155,20 +155,32 @@ header {
     border-bottom-right-radius: 0px; */
 }
 
+
+#logo {
+    border: 10px solid #bd93f9;
+    border-radius: 25px;
+    box-shadow:
+        0 0 100px 10px #f8f8f2;
+}
+
 .logo-rotate {
     transform: rotate(180deg);
 }
 
 
+
 #logo:active {
-    translate: 5px;
+    /* translate: 4px; */
+    transform: translateY(4px);
+    border: 10px solid #ff79c6;
+
 }
 
 
 
 
 .status-bar-fill:hover {
-    background-color: #f1fa8c;
+    background-color: #ff79c6;
 }
 
 footer {
