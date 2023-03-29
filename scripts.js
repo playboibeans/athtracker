@@ -19,10 +19,16 @@ window.addEventListener('load', function () {
 function switchMode() {
     const element = document.body.classList;
     element.toggle("darkMode");
-
     // Store the user's preference in localStorage
     localStorage.setItem('darkMode', element.contains('darkMode'));
+
 }
+
+function logoRotate() {
+    const logo = document.getElementById('logo').classList;
+    logo.toggle("logo-rotate")
+}
+
 
 function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, priceID, athID) {
     axios.get(`https://api.coingecko.com/api/v3/coins/${coin}`)
