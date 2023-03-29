@@ -39,7 +39,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 25px;
-    gap: 25px
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .leftSide,
