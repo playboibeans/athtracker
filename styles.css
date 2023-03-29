@@ -8,9 +8,29 @@ body {
     flex-direction: column;
     color: #44475a;
     background-color: #f8f8f2;
-
-
 }
+
+header {
+    display: flex;
+}
+
+#darkmodeSwitch {
+    margin: 15px;
+    margin-left: auto;
+}
+
+.darkMode {
+    color: #f8f8f2;
+    background-color: #44475a;
+}
+
+/* .statusBarDarkMode {
+    background-color: #44475a;
+}
+
+.statusBarFillDarkMode {
+    background-color: #cfcfc8;
+} */
 
 .hero {
     text-align: center;
@@ -78,6 +98,9 @@ body {
     border-radius: 5x;
 }
 
+
+
+
 @keyframes growFromLeft {
     0% {
         transform: scaleX(0);
@@ -101,6 +124,8 @@ body {
     border-top-right-radius: 100px;
     border-bottom-right-radius: 0px;
 }
+
+
 
 .status-bar-fill:hover {
     background-color: gold;

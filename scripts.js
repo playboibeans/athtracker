@@ -8,6 +8,11 @@ window.addEventListener('load', function () {
     solPrice()
 });
 
+function switchMode() {
+    const element = document.body.classList;
+    element.toggle("darkMode");
+}
+
 
 function btcPrice() {
     axios.get("https://api.coingecko.com/api/v3/coins/bitcoin")
