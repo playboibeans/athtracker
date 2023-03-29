@@ -14,11 +14,11 @@ window.addEventListener('load', function () {
 
     // Check if user has set the dark mode preference
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
     // Set the dark mode class on the body element if user has set the preference
     if (isDarkMode) {
         document.body.classList.add('darkMode');
     }
+
 });
 
 function switchMode() {
@@ -26,6 +26,8 @@ function switchMode() {
     element.toggle("darkMode");
     // Store the user's preference in localStorage
     localStorage.setItem('darkMode', element.contains('darkMode'));
+
+
 
 }
 

@@ -7,7 +7,7 @@ body {
     flex-direction: column;
 
     color: #f8f8f2;
-    background-color: #44475a;
+    background-color: #282a36;
 }
 
 header {
@@ -19,10 +19,7 @@ header {
     margin-left: auto;
 }
 
-.darkMode {
-    color: #44475a;
-    background-color: #f8f8f2;
-}
+
 
 
 
@@ -45,17 +42,23 @@ header {
 
 .leftSide,
 .rightSide {
-    max-width: 500px;
+    /* max-width: 500px; */
     flex: 1 1 0;
 
 }
 
 
 .progress {
-    padding: 50px 0;
+    padding: 50px 50px;
+    justify-content: space-between;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    border: 5px solid #44475a;
+    border-radius: 15px;
+    /* height: 200px; */
 }
+
 
 
 
@@ -63,18 +66,24 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 30px;
 }
 
 .iconAndName {
     display: flex;
-    align-items: end;
+    align-items: center;
+    width: 300px;
+}
+
+.coinIcon {
+    width: 50px;
+    border-radius: 50%;
 }
 
 .iconAndName h2 {
     margin-left: 10px;
-    font-size: 24px;
-    margin-bottom: 0;
+    font-size: 42px;
+    /* margin-bottom: 0; */
 }
 
 .priceAndPercent {
@@ -85,11 +94,7 @@ header {
     margin: 0;
 }
 
-.coinIcon {
-    width: 30px;
-    border-radius: 50%;
-    margin-bottom: 0;
-}
+
 
 
 .currentPrice,
@@ -160,7 +165,8 @@ header {
     border: 10px solid #bd93f9;
     border-radius: 25px;
     box-shadow:
-        0 0 100px 10px #f8f8f2;
+        0 0 10px 5px #f8f8f2;
+
 }
 
 .logo-rotate {
@@ -187,4 +193,10 @@ footer {
     text-align: center;
     padding: 10px;
     /* margin: 10px; */
+}
+
+
+.darkMode {
+    color: #44475a;
+    background-color: #f8f8f2;
 }
