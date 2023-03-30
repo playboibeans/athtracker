@@ -25,6 +25,7 @@ li {
     align-items: center;
     gap: 20px;
     padding: 50px;
+    flex-wrap: wrap;
 }
 
 .sorts button {
