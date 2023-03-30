@@ -20,24 +20,22 @@
     <meta name="description"
         content="Tracking cryptocurrency's all-time high price 24/7. Comparing all-time high prices with current prices of top cryptocurrencies to see how far away is the next bull run.">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 
 </head>
 
 <body>
     <header>
-        <img src="idea.png" onclick="switchMode()" id="darkmodeSwitch" style="height: 40px;">
+        <img src="idea.png" onclick="switchMode()" alt="light mode switch" id="darkmodeSwitch" style="height: 40px;">
     </header>
     <div class="contents">
         <div class="hero">
-            <img src="favicon/android-chrome-192x192.png" onclick="logoRotate()" id="logo" style="height: 100px;">
+            <img src="favicon/android-chrome-192x192.png" onclick="logoRotate()" alt="Crypto ATH Tracker logo" id="logo"
+                style="height: 100px;">
             <h1 style="font-size: 70px;">Crypto ATH Tracker</h1>
             <h2 style="font-size: 25px;">How far are we away from the last all-time high?</h2>
         </div>
@@ -46,7 +44,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="btcIcon" class="coinIcon" src="">
+                            <img id="btcIcon" class="coinIcon" src="" alt="bitcoin icon">
                             <h2 id="btcName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -63,7 +61,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="ethIcon" class="coinIcon" src="">
+                            <img id="ethIcon" class="coinIcon" src="" alt="ethereum icon">
                             <h2 id="ethName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -80,7 +78,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="bnbIcon" class="coinIcon" src="">
+                            <img id="bnbIcon" class="coinIcon" src="" alt="BNB icon">
                             <h2 id="bnbName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -97,7 +95,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="xrpIcon" class="coinIcon" src="">
+                            <img id="xrpIcon" class="coinIcon" src="" alt="XRP icon">
                             <h2 id="xrpName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -114,7 +112,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="maticIcon" class="coinIcon" src="">
+                            <img id="maticIcon" class="coinIcon" src="" alt="matic icon">
                             <h2 id="maticName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -131,7 +129,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="ltcIcon" class="coinIcon" src="">
+                            <img id="ltcIcon" class="coinIcon" src="" alt="litecoin icon">
                             <h2 id="ltcName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -150,7 +148,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="dogeIcon" class="coinIcon" src="">
+                            <img id="dogeIcon" class="coinIcon" src="" alt="dogecoin icon">
                             <h2 id="dogeName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -167,7 +165,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="adaIcon" class="coinIcon" src="">
+                            <img id="adaIcon" class="coinIcon" src="" alt="cardano icon">
                             <h2 id="adaName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -184,7 +182,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="solIcon" class="coinIcon" src="">
+                            <img id="solIcon" class="coinIcon" src="" alt="solana icon">
                             <h2 id="solName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -201,7 +199,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="shibIcon" class="coinIcon" src="">
+                            <img id="shibIcon" class="coinIcon" src="" alt="shib icon">
                             <h2 id="shibName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -218,7 +216,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="dotIcon" class="coinIcon" src="">
+                            <img id="dotIcon" class="coinIcon" src="" alt="polkadot icon">
                             <h2 id="dotName"></h2>
                         </div>
                         <div class="priceAndPercent">
@@ -235,7 +233,7 @@
                 <div class="progress">
                     <div class="coinInfo">
                         <div class="iconAndName">
-                            <img id="avaxIcon" class="coinIcon" src="">
+                            <img id="avaxIcon" class="coinIcon" src="" alt="avax icon">
                             <h2 id="avaxName"></h2>
                         </div>
                         <div class="priceAndPercent">
