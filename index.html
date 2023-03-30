@@ -43,10 +43,11 @@
         </div>
     </div>
     <div class="sorts">
-        <button onclick="sortByDes()">Sort by highest percentage</button>
-        <button onclick="sortByAsc()">Sort by lowest percentage</button>
+        <button onclick="sortByDes()">Sort by highest %</button>
+        <button onclick="sortByAsc()">Sort by lowest %</button>
+        <button onclick="switchList()">Grid/List</button>
+        <button onclick="sortDefault()">Do nothing</button>
     </div>
-
     <ul id="barArea" class=" barArea">
         <li class="progress">
             <div class="coinInfo">
@@ -252,8 +253,46 @@
                 </div>
             </div>
         </li>
+        <li class="progress">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="arbIcon" class="coinIcon" src="" alt="arb icon">
+                    <h2 id="arbName"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="arb-status-price" class="currentPrice"></p>
+                    <p id="arb-percent" class="percent"></p>
+                </div>
+            </div>
+            <p class="athOnStatusBar" id="arbAth"></p>
+            <div class="arb-status-bar statusBar">
+                <div class="arb-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="opIcon" class="coinIcon" src="" alt="op icon">
+                    <h2 id="opName"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="op-status-price" class="currentPrice"></p>
+                    <p id="op-percent" class="percent"></p>
+                </div>
+            </div>
+            <p class="athOnStatusBar" id="opAth"></p>
+            <div class="op-status-bar statusBar">
+                <div class="op-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+
     </ul>
-    <footer>@19798eth<br>Data provided by CoinGecko</footer>
+    <footer>@19798eth<br>Data provided by <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a> | Color
+        Palatte inspired by
+        <a href="https://draculatheme.com" target="_blank">Dracula</a>
+    </footer>
 </body>
 
 

@@ -10,7 +10,9 @@ window.addEventListener('load', function () {
     maticPrice();
     ltcPrice();
     dotPrice();
-    avaxPrice()
+    avaxPrice();
+    arbPrice();
+    opPrice()
 
     // Check if user has set the dark mode preference
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -29,8 +31,16 @@ function switchMode() {
     // Store the user's preference in localStorage
     localStorage.setItem('darkMode', element.contains('darkMode'));
 
+}
 
 
+function switchList() {
+    const element = document.getElementById('barArea').classList;
+    element.toggle("barAreaListView");
+    // Store the user's preference in localStorage
+    // localStorage.setItem('darkMode', element.contains('darkMode'));
+    const lists = document.querySelectorAll('.progress');
+    lists.forEach(list => { list.classList.toggle('progressLength'); });
 }
 
 function logoRotate() {
@@ -110,13 +120,29 @@ function avaxPrice() {
     fetchCryptoPrice('avalanche-2', 'avaxIcon', 'avax-status-bar', 'avax-status-bar-fill', 'avax-status-price', 'avax-percent', 'avaxAth', 'avaxName');
 }
 
+function arbPrice() {
+    fetchCryptoPrice('arbitrum', 'arbIcon', 'arb-status-bar', 'arb-status-bar-fill', 'arb-status-price', 'arb-percent', 'arbAth', 'arbName');
+}
 
+function opPrice() {
+    fetchCryptoPrice('optimism', 'opIcon', 'op-status-bar', 'op-status-bar-fill', 'op-status-price', 'op-percent', 'opAth', 'opName');
+}
+
+
+
+
+
+function sortDefault() {
+    const ul = document.getElementById('barArea');
+    const originalOrder = Array.from(ul.querySelectorAll('li'));
+    console.log(originalOrder)
+    originalOrder.forEach(li => ul.appendChild(li));
+}
 
 
 function sortByDes() {
     const ul = document.getElementById('barArea');
     const lis = Array.from(ul.querySelectorAll('li'));
-
     lis.sort((a, b) => {
         const aPercent = parseFloat(a.querySelector('.percent').textContent);
         const bPercent = parseFloat(b.querySelector('.percent').textContent);
@@ -138,3 +164,7 @@ function sortByAsc() {
 
     lis.forEach(li => ul.appendChild(li));
 }
+
+// function reset() {
+//     alert('I actually do nothing.')
+// }

@@ -17,30 +17,28 @@ li {
 
 .sorts {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 50px;
+    padding: 30px;
     flex-wrap: wrap;
 }
 
 .sorts button {
     border: 5px solid #ff79c6;
-    width: 350px;
+    width: 250px;
     font-family: inherit;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 20px;
     background-color: transparent;
     color: inherit;
-    border-radius: 30px;
-    padding: 20px 10px;
-
+    border-radius: 15px;
+    padding: 10px 10px;
 }
 
 .sorts button:active {
     transform: translateY(4px);
-
+    border-color: #50fa7b;
 }
 
 
@@ -63,11 +61,16 @@ li {
 
 .barArea {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0 50px;
-    /* gap: 25px; */
+    gap: 20px;
     flex-wrap: wrap;
 }
+
+.barAreaListView {
+    display: block;
+}
+
 
 
 
@@ -76,12 +79,21 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 550px;
-    min-height: 200px;
-    padding: 50px 30px;
+    width: 300px;
+    padding: 20px 20px;
     margin-bottom: 50px;
     border: 5px solid #44475a;
     border-radius: 15px;
+}
+
+.progressLength {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    border: none;
+    width: auto;
 }
 
 
@@ -89,59 +101,48 @@ li {
 
 .coinInfo {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
 
 .iconAndName {
     display: flex;
     align-items: center;
-    width: 300px;
+    /* width: 200px; */
 }
 
 .coinIcon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
 .iconAndName h2 {
     margin-left: 10px;
-    font-size: 42px;
+    font-size: 20px;
 }
-
-.priceAndPercent {
-    margin-left: auto;
-}
-
-.priceAndPercent p {
-    margin: 0;
-}
-
-
-
 
 .currentPrice,
 .percent {
+    margin: 0;
     font-weight: 900;
     text-align: right;
 }
 
 .currentPrice {
-    font-size: 36px;
+    font-size: 20px;
     color: #ff79c6;
 }
 
 .percent {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .athOnStatusBar {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
-    text-align: end;
-    margin: 0;
+    text-align: right;
+    margin: 0 0 5px 0;
     color: #bd93f9;
 }
 
@@ -149,11 +150,11 @@ li {
 
 .statusBar {
     position: relative;
-    height: 30px;
+    height: 15px;
     width: 100%;
     background-color: transparent;
     border-radius: 25px;
-    border: 5px solid #bd93f9
+    border: 3px solid #bd93f9
 }
 
 
@@ -202,12 +203,6 @@ li {
 }
 
 
-
-
-.status-bar-fill:hover {
-    background-color: #ff79c6;
-}
-
 footer {
     text-align: center;
     padding: 10px;
@@ -217,4 +212,9 @@ footer {
 .darkMode {
     color: #44475a;
     background-color: #f8f8f2;
+}
+
+a {
+    /* text-decoration: none; */
+    color: inherit;
 }
