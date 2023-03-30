@@ -21,6 +21,8 @@ window.addEventListener('load', function () {
 
 });
 
+
+
 function switchMode() {
     const element = document.body.classList;
     element.toggle("darkMode");
@@ -111,3 +113,28 @@ function avaxPrice() {
 
 
 
+function sortByDes() {
+    const ul = document.getElementById('barArea');
+    const lis = Array.from(ul.querySelectorAll('li'));
+
+    lis.sort((a, b) => {
+        const aPercent = parseFloat(a.querySelector('.percent').textContent);
+        const bPercent = parseFloat(b.querySelector('.percent').textContent);
+        return bPercent - aPercent;
+    });
+
+    lis.forEach(li => ul.appendChild(li));
+}
+
+function sortByAsc() {
+    const ul = document.getElementById('barArea');
+    const lis = Array.from(ul.querySelectorAll('li'));
+
+    lis.sort((a, b) => {
+        const aPercent = parseFloat(a.querySelector('.percent').textContent);
+        const bPercent = parseFloat(b.querySelector('.percent').textContent);
+        return aPercent - bPercent;
+    });
+
+    lis.forEach(li => ul.appendChild(li));
+}
