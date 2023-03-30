@@ -51,7 +51,7 @@ body {
 .progress {
     padding: 50px 30px;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     border: 5px solid #44475a;
