@@ -9,7 +9,9 @@ body {
     background-color: #282a36;
 }
 
-
+li {
+    list-style-type: none;
+}
 
 #darkmodeSwitch {
     margin: 15px;
@@ -40,26 +42,23 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding: 0 50px;
-    gap: 25px;
+    /* gap: 25px; */
     flex-wrap: wrap;
 }
 
-.leftSide,
-.rightSide {
-    flex: 1 1 0;
 
-}
 
 
 .progress {
-    padding: 50px 30px;
-    justify-content: space-between;
-    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 550px;
+    min-height: 200px;
+    padding: 50px 30px;
+    margin-bottom: 50px;
     border: 5px solid #44475a;
     border-radius: 15px;
-
 }
 
 
