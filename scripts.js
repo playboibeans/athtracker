@@ -44,7 +44,7 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
             document.getElementById(coinName).innerHTML = `${nameOfCoin}`;
             const crypto = price.data.market_data.current_price.usd;
             const crypto_ATH = price.data.market_data.ath.usd;
-            const icon = price.data.image.large;
+            const icon = price.data.image.small;
             document.getElementById(iconID).src = icon;
             const athStatusBar = document.querySelector(`.${statusBarClass}`);
             const athStatusBarFill = athStatusBar.querySelector(`.${statusBarFillClass}`);
