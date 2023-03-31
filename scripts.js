@@ -15,11 +15,13 @@ window.addEventListener('load', function () {
     opPrice()
 
     // Check if user has set the dark mode preference
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    // const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+
     // Set the dark mode class on the body element if user has set the preference
-    if (isDarkMode) {
-        document.body.classList.add('darkMode');
-    }
+    // if (isDarkMode) {
+    //     document.body.classList.add('darkMode');
+    // }
 
 });
 
@@ -29,7 +31,7 @@ function switchMode() {
     const element = document.body.classList;
     element.toggle("darkMode");
     // Store the user's preference in localStorage
-    localStorage.setItem('darkMode', element.contains('darkMode'));
+    // localStorage.setItem('darkMode', element.contains('darkMode'));
 
 
 }
@@ -43,6 +45,8 @@ function switchIcon() {
     } else {
         switchImg.setAttribute("src", "switch.png");
     }
+
+    localStorage.setItem('darkmodeSwitch', element.contains('darkmodeSwitch'));
 }
 
 
@@ -57,6 +61,7 @@ function switchList() {
 
     const moreText = document.getElementById('moreText').classList
     moreText.toggle('moreText')
+
 }
 
 function logoRotate() {
@@ -148,12 +153,7 @@ function opPrice() {
 
 
 
-// function sortDefault() {
-//     const ul = document.getElementById('barArea');
-//     const originalOrder = Array.from(ul.querySelectorAll('li'));
-//     console.log(originalOrder)
-//     originalOrder.forEach(li => ul.appendChild(li));
-// }
+
 
 
 function sortByDes() {

@@ -1,12 +1,25 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: #f8f8f2;
     background-color: #282a36;
+    align-items: center;
+
+}
+
+.darkMode {
+    color: #44475a;
+    background-color: #f8f8f2;
 }
 
 li {
@@ -66,9 +79,12 @@ li {
 }
 
 .barAreaListView {
-    display: block;
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
+
+
 
 
 
@@ -86,13 +102,15 @@ li {
 }
 
 .progressLength {
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 20px;
-    margin-bottom: 10px;
-    border: none;
-    width: auto;
 }
 
 
@@ -189,10 +207,10 @@ li {
 #logo {
     border: 10px solid #bd93f9;
     border-radius: 25px;
-    box-shadow:
-        0 0 10px 5px #f8f8f2;
+    box-shadow: 0 0 10px 5px #f8f8f2;
 
 }
+
 
 .logo-rotate {
     transform: rotate(180deg);
@@ -207,16 +225,15 @@ li {
 }
 
 
+
+
 footer {
     text-align: center;
     padding: 10px;
 }
 
 
-.darkMode {
-    color: #44475a;
-    background-color: #f8f8f2;
-}
+
 
 a {
     /* text-decoration: none; */
