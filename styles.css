@@ -1,13 +1,6 @@
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 body {
     font-family: 'Courier New', Courier, monospace;
-    padding: 0;
+    padding: 100px 0 0 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -16,6 +9,19 @@ body {
     align-items: center;
 
 }
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: inherit;
+    z-index: 1;
+}
+
+
 
 .darkMode {
     color: #44475a;
