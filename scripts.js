@@ -12,7 +12,9 @@ window.addEventListener('load', function () {
     dotPrice();
     avaxPrice();
     arbPrice();
-    opPrice()
+    opPrice();
+    searchCoin();
+
 
     // Check if user has set the dark mode preference
     // const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -24,6 +26,8 @@ window.addEventListener('load', function () {
     // }
 
 });
+
+
 
 
 
@@ -188,3 +192,31 @@ function sortByAsc() {
 // function reset() {
 //     alert('I actually do nothing.')
 // }
+
+
+function searchCoin() {
+    const searchInput = document.getElementById('searchInput');
+    const listItems = document.querySelectorAll('.progress');
+
+    searchInput.addEventListener('input', () => {
+        const searchText = searchInput.value.toLowerCase();
+        listItems.forEach(item => {
+            const coinName = item.id.toLowerCase();
+            if (coinName.includes(searchText)) {
+                item.style.display = 'block';
+
+            } else {
+                item.style.display = 'none';
+
+            }
+        });
+    });
+
+}
+
+
+
+// removes buttons
+// const body = document.body
+// const sort = document.querySelector('.sorts')
+// body.removeChild(sort)

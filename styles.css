@@ -32,20 +32,9 @@ li {
     list-style-type: none;
 }
 
-
-
-.sorts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    flex-wrap: wrap;
-}
-
-.sorts button {
-    border: 5px solid #ff79c6;
-    width: 250px;
+#searchInput {
+    border: 3px solid #bd93f9;
+    width: 50%;
     font-family: inherit;
     font-weight: 900;
     font-size: 20px;
@@ -53,6 +42,32 @@ li {
     color: inherit;
     border-radius: 15px;
     padding: 10px 10px;
+    text-align: center;
+    height: 15px;
+}
+
+.sorts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.sorts button {
+    text-align: center;
+    border: 3px solid #ff79c6;
+    width: 50px;
+    height: 50px;
+    font-family: inherit;
+    /* font-weight: 700; */
+    font-size: 32px;
+    background-color: transparent;
+    color: inherit;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
 }
 
 .sorts button:active {
@@ -211,7 +226,7 @@ li {
 
 
 #logo {
-    border: 10px solid #bd93f9;
+    border: 8px solid #bd93f9;
     border-radius: 25px;
     box-shadow: 0 0 10px 5px #f8f8f2;
 
@@ -226,7 +241,7 @@ li {
 
 #logo:active {
     transform: translateY(4px);
-    border: 10px solid #ff79c6;
+    border: 8px solid #ff79c6;
 
 }
 

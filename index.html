@@ -33,26 +33,28 @@
 <body>
     <header>
         <h3 style="font-size: 40px; margin:15px auto 15px 15px;">CAT</h3>
+        <input type="text" id="searchInput" placeholder="Search for a coin...">
         <img src="switch.png" onclick="switchMode(); switchIcon();" alt="light mode switch" id="darkmodeSwitch"
-            style="height: 40px; width: 40px; margin:17.75px 17.75px 17.75px auto; ">
+            style="height: 35px; width: 35px; margin:17.75px 17.75px 17.75px auto; ">
     </header>
     <div class="hero">
         <div>
             <img src="logo.webp" onclick="logoRotate()" alt="Crypto ATH Tracker logo" id="logo"
-                style="height: 100px; width: 100px;">
-            <h1 style="font-size: 70px; margin-bottom: 0px;">Crypto ATH Tracker</h1>
-            <p style="margin-top: 0;">(Also known as the C.A.T)</p>
-            <h2 style="font-size: 25px;">How far are we away from the last all-time high?</h2>
+                style="height: 69px; width: 69px;">
+            <h1 style="font-size: 50px; margin-bottom: 0px;">Crypto ATH Tracker</h1>
+            <!-- <p style="margin-top: 0;">(Also known as the C.A.T)</p> -->
+            <h2 style="font-size: 20px; padding: 0 50px;">Wen all-time high?</h2>
+
         </div>
     </div>
     <div class="sorts">
-        <button onclick="sortByDes()">Sort by highest %</button>
-        <button onclick="sortByAsc()">Sort by lowest %</button>
-        <button onclick="switchList()">Grid/List</button>
-        <button>Do nothing</button>
+        <button onclick="sortByDes()">&#128071</button>
+        <button onclick="sortByAsc()">&#128070</button>
+        <button onclick="switchList()">&#129479</button>
+        <button>&#129300</button>
     </div>
     <ul id="barArea" class=" barArea">
-        <li class="progress">
+        <li class="progress" id="btc, bitcoin">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="btcIcon" class="coinIcon" src="" alt="bitcoin icon">
@@ -69,7 +71,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="eth, ethereum">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="ethIcon" class="coinIcon" src="" alt="ethereum icon">
@@ -86,7 +88,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="bnb, binance">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="bnbIcon" class="coinIcon" src="" alt="BNB icon">
@@ -103,7 +105,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="xrp, ripple">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="xrpIcon" class="coinIcon" src="" alt="XRP icon">
@@ -120,7 +122,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="matic, polygon">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="maticIcon" class="coinIcon" src="" alt="matic icon">
@@ -137,7 +139,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="ltc, litecoin">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="ltcIcon" class="coinIcon" src="" alt="litecoin icon">
@@ -154,7 +156,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="doge, dogecoin">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="dogeIcon" class="coinIcon" src="" alt="dogecoin icon">
@@ -171,7 +173,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="ada, cardano">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="adaIcon" class="coinIcon" src="" alt="cardano icon">
@@ -188,7 +190,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="sol, solana">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="solIcon" class="coinIcon" src="" alt="solana icon">
@@ -205,7 +207,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="shib, shiba">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="shibIcon" class="coinIcon" src="" alt="shib icon">
@@ -222,7 +224,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="dot, polkadot">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="dotIcon" class="coinIcon" src="" alt="polkadot icon">
@@ -239,7 +241,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="avax, avalanche">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="avaxIcon" class="coinIcon" src="" alt="avax icon">
@@ -256,7 +258,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="arb, arbitrum">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="arbIcon" class="coinIcon" src="" alt="arb icon">
@@ -273,7 +275,7 @@
                 </div>
             </div>
         </li>
-        <li class="progress">
+        <li class="progress" id="op, optimism">
             <div class="coinInfo">
                 <div class="iconAndName">
                     <img id="opIcon" class="coinIcon" src="" alt="op icon">
