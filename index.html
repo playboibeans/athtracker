@@ -30,11 +30,10 @@
 </head>
 
 <body>
-
+    <img src="switch.png" onclick="switchMode(); switchIcon();" alt="light mode switch" id="darkmodeSwitch"
+        style="height: 40px; width: 40px; margin:20px 20px 20px auto; ">
     <div class="hero">
-        <img src="switch.png" onclick="switchMode()" alt="light mode switch" id="darkmodeSwitch"
-            style="height: 40px; width: 40px; margin:20px 20px auto auto; ">
-        <div style="margin-bottom: auto">
+        <div>
             <img src="logo.webp" onclick="logoRotate()" alt="Crypto ATH Tracker logo" id="logo"
                 style="height: 100px; width: 100px;">
             <h1 style="font-size: 70px; margin-bottom: 0px;">Crypto ATH Tracker</h1>
@@ -287,9 +286,12 @@
                 </div>
             </div>
         </li>
+        <li id="moreToCome" class="progress" style="justify-content: center;">
+            <h2 id="moreText" style="margin: 0;">More to come...</h2>
+        </li>
 
     </ul>
-    <footer>@19798eth<br>Data provided by <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a> | Color
+    <footer>@19798eth<br>Data provided by <a href=" https://www.coingecko.com/" target="_blank">CoinGecko</a> | Color
         Palatte inspired by
         <a href="https://draculatheme.com" target="_blank">Dracula</a>
     </footer>

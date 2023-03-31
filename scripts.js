@@ -31,7 +31,20 @@ function switchMode() {
     // Store the user's preference in localStorage
     localStorage.setItem('darkMode', element.contains('darkMode'));
 
+
 }
+
+function switchIcon() {
+    const switchImg = document.getElementById("darkmodeSwitch");
+    const currentSrc = switchImg.getAttribute("src");
+
+    if (currentSrc.endsWith("switch.png")) {
+        switchImg.setAttribute("src", "light.png");
+    } else {
+        switchImg.setAttribute("src", "switch.png");
+    }
+}
+
 
 
 function switchList() {
@@ -39,8 +52,11 @@ function switchList() {
     element.toggle("barAreaListView");
     // Store the user's preference in localStorage
     // localStorage.setItem('darkMode', element.contains('darkMode'));
-    const lists = document.querySelectorAll('.progress');
+    const lists = document.querySelectorAll('li');
     lists.forEach(list => { list.classList.toggle('progressLength'); });
+
+    const moreText = document.getElementById('moreText').classList
+    moreText.toggle('moreText')
 }
 
 function logoRotate() {
@@ -132,37 +148,41 @@ function opPrice() {
 
 
 
-function sortDefault() {
-    const ul = document.getElementById('barArea');
-    const originalOrder = Array.from(ul.querySelectorAll('li'));
-    console.log(originalOrder)
-    originalOrder.forEach(li => ul.appendChild(li));
-}
+// function sortDefault() {
+//     const ul = document.getElementById('barArea');
+//     const originalOrder = Array.from(ul.querySelectorAll('li'));
+//     console.log(originalOrder)
+//     originalOrder.forEach(li => ul.appendChild(li));
+// }
 
 
 function sortByDes() {
     const ul = document.getElementById('barArea');
-    const lis = Array.from(ul.querySelectorAll('li'));
+    const removes = document.getElementById('moreToCome')
+    ul.removeChild(removes)
+    const lis = Array.from(ul.querySelectorAll('.progress'));
     lis.sort((a, b) => {
         const aPercent = parseFloat(a.querySelector('.percent').textContent);
         const bPercent = parseFloat(b.querySelector('.percent').textContent);
         return bPercent - aPercent;
     });
-
     lis.forEach(li => ul.appendChild(li));
+    ul.appendChild(removes)
 }
 
 function sortByAsc() {
     const ul = document.getElementById('barArea');
-    const lis = Array.from(ul.querySelectorAll('li'));
-
+    const removes = document.getElementById('moreToCome')
+    ul.removeChild(removes)
+    const lis = Array.from(ul.querySelectorAll('.progress'));
     lis.sort((a, b) => {
         const aPercent = parseFloat(a.querySelector('.percent').textContent);
         const bPercent = parseFloat(b.querySelector('.percent').textContent);
         return aPercent - bPercent;
     });
-
     lis.forEach(li => ul.appendChild(li));
+    ul.appendChild(removes)
+
 }
 
 // function reset() {
