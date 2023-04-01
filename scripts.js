@@ -13,6 +13,7 @@ window.addEventListener('load', function () {
     avaxPrice();
     arbPrice();
     opPrice();
+    astrPrice();
     searchCoin();
 
 
@@ -152,6 +153,10 @@ function arbPrice() {
 
 function opPrice() {
     fetchCryptoPrice('optimism', 'opIcon', 'op-status-bar', 'op-status-bar-fill', 'op-status-price', 'op-percent', 'opAth', 'opName');
+}
+
+function astrPrice() {
+    fetchCryptoPrice('astar', 'astrIcon', 'astr-status-bar', 'astr-status-bar-fill', 'astr-status-price', 'astr-percent', 'astrAth', 'astrName');
 }
 
 
