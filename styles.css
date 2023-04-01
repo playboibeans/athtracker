@@ -78,6 +78,10 @@ li {
     margin: 0;
 }
 
+.sorts button:hover {
+    border-color: #ff79c6;
+}
+
 .sorts button:active {
     transform: translateY(4px);
     border-color: #50fa7b;
