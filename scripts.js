@@ -102,7 +102,7 @@ function searchCoin() {
         listItems.forEach(item => {
             const coinName = item.id.toLowerCase();
             if (coinName.includes(searchText)) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
 
             } else {
                 item.style.display = 'none';
