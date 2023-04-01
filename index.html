@@ -31,8 +31,8 @@
 
 <body>
     <header>
-        <h3 style="font-size: 40px; margin:15px auto 15px 15px;"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">CAT</h3>
+        <h1 style="font-size: 28px; margin:15px auto 15px 15px;"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Crypto ATH Tracker</h1>
         <input type="text" id="searchInput" placeholder="Search...">
         <img src="switch.png" onclick="switchMode(); switchIcon();" alt="light mode switch" id="darkmodeSwitch"
             style="height: 20px; width: 20px; margin:17.75px">
@@ -43,7 +43,7 @@
                 style="height: 69px; width: 69px;">
             <h1 style="font-size: 50px; margin-bottom: 0px;">Crypto ATH Tracker</h1>
             <!-- <p style="margin-top: 0;">(Also known as the C.A.T)</p> -->
-            <h2 style="font-size: 20px; padding: 0 50px;">Wen all-time high?</h2>
+            <h2 style="font-size: 25px; padding: 20px 20px;">Wen all-time high(again)?</h2>
 
         </div>
     </div>
@@ -51,21 +51,22 @@
         <button onclick="sortByDes()">&#128071</button>
         <button onclick="sortByAsc()">&#128070</button>
         <button onclick="switchList()">&#129479</button>
-        <a href="https://forms.gle/oDhL1dBa2UVPaQoBA" target="_blank"><button>&#129300</button></a>
+        <button><a href="https://forms.gle/oDhL1dBa2UVPaQoBA" target="_blank"
+                style="text-decoration: none;">&#129300</a></button>
     </div>
     <ul id="barArea" class=" barArea">
         <li class="progress" id="btc, bitcoin">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="btcIcon" class="coinIcon" src="" alt="bitcoin icon">
-                    <h2 id="btcName"></h2>
+                    <img id="btc-Icon" class="coinIcon" src="" alt="bitcoin icon">
+                    <h2 id="btc-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="btc-status-price" class="currentPrice"></p>
+                    <p id="btc-price" class="currentPrice"></p>
                     <p id="btc-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="btcAth"></p>
+            <p class="athOnStatusBar" id="btc-Ath"></p>
             <div class="btc-status-bar statusBar">
                 <div class="btc-status-bar-fill status-bar-fill">
                 </div>
@@ -74,15 +75,15 @@
         <li class="progress" id="eth, ethereum">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="ethIcon" class="coinIcon" src="" alt="ethereum icon">
-                    <h2 id="ethName"></h2>
+                    <img id="eth-Icon" class="coinIcon" src="" alt="ethereum icon">
+                    <h2 id="eth-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="eth-status-price" class="currentPrice"></p>
+                    <p id="eth-price" class="currentPrice"></p>
                     <p id="eth-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="ethAth"></p>
+            <p class="athOnStatusBar" id="eth-Ath"></p>
             <div class="eth-status-bar statusBar">
                 <div class="eth-status-bar-fill status-bar-fill">
                 </div>
@@ -91,15 +92,15 @@
         <li class="progress" id="bnb, binance">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="bnbIcon" class="coinIcon" src="" alt="BNB icon">
-                    <h2 id="bnbName"></h2>
+                    <img id="bnb-Icon" class="coinIcon" src="" alt="BNB icon">
+                    <h2 id="bnb-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="bnb-status-price" class="currentPrice"></p>
+                    <p id="bnb-price" class="currentPrice"></p>
                     <p id="bnb-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="bnbAth"></p>
+            <p class="athOnStatusBar" id="bnb-Ath"></p>
             <div class="bnb-status-bar statusBar">
                 <div class="bnb-status-bar-fill status-bar-fill">
                 </div>
@@ -108,15 +109,15 @@
         <li class="progress" id="xrp, ripple">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="xrpIcon" class="coinIcon" src="" alt="XRP icon">
-                    <h2 id="xrpName"></h2>
+                    <img id="xrp-Icon" class="coinIcon" src="" alt="XRP icon">
+                    <h2 id="xrp-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="xrp-status-price" class="currentPrice"></p>
+                    <p id="xrp-price" class="currentPrice"></p>
                     <p id="xrp-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="xrpAth"></p>
+            <p class="athOnStatusBar" id="xrp-Ath"></p>
             <div class="xrp-status-bar statusBar">
                 <div class="xrp-status-bar-fill status-bar-fill">
                 </div>
@@ -125,15 +126,15 @@
         <li class="progress" id="matic, polygon">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="maticIcon" class="coinIcon" src="" alt="matic icon">
-                    <h2 id="maticName"></h2>
+                    <img id="matic-Icon" class="coinIcon" src="" alt="matic icon">
+                    <h2 id="matic-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="matic-status-price" class="currentPrice"></p>
+                    <p id="matic-price" class="currentPrice"></p>
                     <p id="matic-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="maticAth"></p>
+            <p class="athOnStatusBar" id="matic-Ath"></p>
             <div class="matic-status-bar statusBar">
                 <div class="matic-status-bar-fill status-bar-fill">
                 </div>
@@ -142,15 +143,15 @@
         <li class="progress" id="ltc, litecoin">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="ltcIcon" class="coinIcon" src="" alt="litecoin icon">
-                    <h2 id="ltcName"></h2>
+                    <img id="ltc-Icon" class="coinIcon" src="" alt="litecoin icon">
+                    <h2 id="ltc-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="ltc-status-price" class="currentPrice"></p>
+                    <p id="ltc-price" class="currentPrice"></p>
                     <p id="ltc-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="ltcAth"></p>
+            <p class="athOnStatusBar" id="ltc-Ath"></p>
             <div class="ltc-status-bar statusBar">
                 <div class="ltc-status-bar-fill status-bar-fill">
                 </div>
@@ -159,15 +160,15 @@
         <li class="progress" id="doge, dogecoin">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="dogeIcon" class="coinIcon" src="" alt="dogecoin icon">
-                    <h2 id="dogeName"></h2>
+                    <img id="doge-Icon" class="coinIcon" src="" alt="dogecoin icon">
+                    <h2 id="doge-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="doge-status-price" class="currentPrice"></p>
+                    <p id="doge-price" class="currentPrice"></p>
                     <p id="doge-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="dogeAth"></p>
+            <p class="athOnStatusBar" id="doge-Ath"></p>
             <div class="doge-status-bar statusBar">
                 <div class="doge-status-bar-fill status-bar-fill">
                 </div>
@@ -176,15 +177,15 @@
         <li class="progress" id="ada, cardano">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="adaIcon" class="coinIcon" src="" alt="cardano icon">
-                    <h2 id="adaName"></h2>
+                    <img id="ada-Icon" class="coinIcon" src="" alt="cardano icon">
+                    <h2 id="ada-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="ada-status-price" class="currentPrice"></p>
+                    <p id="ada-price" class="currentPrice"></p>
                     <p id="ada-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="adaAth"></p>
+            <p class="athOnStatusBar" id="ada-Ath"></p>
             <div class="ada-status-bar statusBar">
                 <div class="ada-status-bar-fill status-bar-fill">
                 </div>
@@ -193,15 +194,15 @@
         <li class="progress" id="sol, solana">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="solIcon" class="coinIcon" src="" alt="solana icon">
-                    <h2 id="solName"></h2>
+                    <img id="sol-Icon" class="coinIcon" src="" alt="solana icon">
+                    <h2 id="sol-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="sol-status-price" class="currentPrice"></p>
+                    <p id="sol-price" class="currentPrice"></p>
                     <p id="sol-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="solAth"></p>
+            <p class="athOnStatusBar" id="sol-Ath"></p>
             <div class="sol-status-bar statusBar">
                 <div class="sol-status-bar-fill status-bar-fill">
                 </div>
@@ -210,15 +211,15 @@
         <li class="progress" id="shib, shiba">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="shibIcon" class="coinIcon" src="" alt="shib icon">
-                    <h2 id="shibName"></h2>
+                    <img id="shib-Icon" class="coinIcon" src="" alt="shib icon">
+                    <h2 id="shib-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="shib-status-price" class="currentPrice"></p>
+                    <p id="shib-price" class="currentPrice"></p>
                     <p id="shib-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="shibAth"></p>
+            <p class="athOnStatusBar" id="shib-Ath"></p>
             <div class="shib-status-bar statusBar">
                 <div class="shib-status-bar-fill status-bar-fill">
                 </div>
@@ -227,15 +228,15 @@
         <li class="progress" id="dot, polkadot">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="dotIcon" class="coinIcon" src="" alt="polkadot icon">
-                    <h2 id="dotName"></h2>
+                    <img id="dot-Icon" class="coinIcon" src="" alt="polkadot icon">
+                    <h2 id="dot-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="dot-status-price" class="currentPrice"></p>
+                    <p id="dot-price" class="currentPrice"></p>
                     <p id="dot-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="dotAth"></p>
+            <p class="athOnStatusBar" id="dot-Ath"></p>
             <div class="dot-status-bar statusBar">
                 <div class="dot-status-bar-fill status-bar-fill">
                 </div>
@@ -244,15 +245,15 @@
         <li class="progress" id="avax, avalanche">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="avaxIcon" class="coinIcon" src="" alt="avax icon">
-                    <h2 id="avaxName"></h2>
+                    <img id="avax-Icon" class="coinIcon" src="" alt="avax icon">
+                    <h2 id="avax-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="avax-status-price" class="currentPrice"></p>
+                    <p id="avax-price" class="currentPrice"></p>
                     <p id="avax-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="avaxAth"></p>
+            <p class="athOnStatusBar" id="avax-Ath"></p>
             <div class="avax-status-bar statusBar">
                 <div class="avax-status-bar-fill status-bar-fill">
                 </div>
@@ -261,15 +262,15 @@
         <li class="progress" id="arb, arbitrum">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="arbIcon" class="coinIcon" src="" alt="arb icon">
-                    <h2 id="arbName"></h2>
+                    <img id="arb-Icon" class="coinIcon" src="" alt="arb icon">
+                    <h2 id="arb-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="arb-status-price" class="currentPrice"></p>
+                    <p id="arb-price" class="currentPrice"></p>
                     <p id="arb-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="arbAth"></p>
+            <p class="athOnStatusBar" id="arb-Ath"></p>
             <div class="arb-status-bar statusBar">
                 <div class="arb-status-bar-fill status-bar-fill">
                 </div>
@@ -278,15 +279,15 @@
         <li class="progress" id="op, optimism">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="opIcon" class="coinIcon" src="" alt="op icon">
-                    <h2 id="opName"></h2>
+                    <img id="op-Icon" class="coinIcon" src="" alt="op icon">
+                    <h2 id="op-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="op-status-price" class="currentPrice"></p>
+                    <p id="op-price" class="currentPrice"></p>
                     <p id="op-percent" class="percent"></p>
                 </div>
             </div>
-            <p class="athOnStatusBar" id="opAth"></p>
+            <p class="athOnStatusBar" id="op-Ath"></p>
             <div class="op-status-bar statusBar">
                 <div class="op-status-bar-fill status-bar-fill">
                 </div>
@@ -295,17 +296,119 @@
         <li class="progress" id="astr, astar">
             <div class="coinInfo">
                 <div class="iconAndName">
-                    <img id="astrIcon" class="coinIcon" src="" alt="astr icon">
-                    <h2 id="astrName"></h2>
+                    <img id="astr-Icon" class="coinIcon" src="" alt="astr icon">
+                    <h2 id="astr-Name"></h2>
                 </div>
                 <div class="priceAndPercent">
-                    <p id="astr-status-price" class="currentPrice"></p>
+                    <p id="astr-price" class="currentPrice"></p>
                     <p id="astr-percent" class="percent"></p>
                 </div>
             </div>
-            <p id="astrAth" class="athOnStatusBar"></p>
+            <p id="astr-Ath" class="athOnStatusBar"></p>
             <div class="astr-status-bar statusBar">
                 <div class="astr-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="trx, tron">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="trx-Icon" class="coinIcon" src="" alt="trx icon">
+                    <h2 id="trx-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="trx-price" class="currentPrice"></p>
+                    <p id="trx-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="trx-Ath" class="athOnStatusBar"></p>
+            <div class="trx-status-bar statusBar">
+                <div class="trx-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="uni, uniswap">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="uni-Icon" class="coinIcon" src="" alt="uni icon">
+                    <h2 id="uni-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="uni-price" class="currentPrice"></p>
+                    <p id="uni-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="uni-Ath" class="athOnStatusBar"></p>
+            <div class="uni-status-bar statusBar">
+                <div class="uni-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="link, chainlink">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="link-Icon" class="coinIcon" src="" alt="link icon">
+                    <h2 id="link-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="link-price" class="currentPrice"></p>
+                    <p id="link-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="link-Ath" class="athOnStatusBar"></p>
+            <div class="link-status-bar statusBar">
+                <div class="link-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="atom, cosmos">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="atom-Icon" class="coinIcon" src="" alt="atom icon">
+                    <h2 id="atom-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="atom-price" class="currentPrice"></p>
+                    <p id="atom-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="atom-Ath" class="athOnStatusBar"></p>
+            <div class="atom-status-bar statusBar">
+                <div class="atom-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="etc, ethereum-classic">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="etc-Icon" class="coinIcon" src="" alt="etc icon">
+                    <h2 id="etc-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="etc-price" class="currentPrice"></p>
+                    <p id="etc-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="etc-Ath" class="athOnStatusBar"></p>
+            <div class="etc-status-bar statusBar">
+                <div class="etc-status-bar-fill status-bar-fill">
+                </div>
+            </div>
+        </li>
+        <li class="progress" id="xmr, monero">
+            <div class="coinInfo">
+                <div class="iconAndName">
+                    <img id="xmr-Icon" class="coinIcon" src="" alt="etc icon">
+                    <h2 id="xmr-Name"></h2>
+                </div>
+                <div class="priceAndPercent">
+                    <p id="xmr-price" class="currentPrice"></p>
+                    <p id="xmr-percent" class="percent"></p>
+                </div>
+            </div>
+            <p id="xmr-Ath" class="athOnStatusBar"></p>
+            <div class="xmr-status-bar statusBar">
+                <div class="xmr-status-bar-fill status-bar-fill">
                 </div>
             </div>
         </li>

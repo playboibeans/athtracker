@@ -14,18 +14,13 @@ window.addEventListener('load', function () {
     arbPrice();
     opPrice();
     astrPrice();
+    trxPrice();
+    uniPrice();
+    linkPrice();
+    atomPrice();
+    etcPrice();
+    xmrPrice();
     searchCoin();
-
-
-    // Check if user has set the dark mode preference
-    // const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
-
-    // Set the dark mode class on the body element if user has set the preference
-    // if (isDarkMode) {
-    //     document.body.classList.add('darkMode');
-    // }
-
 });
 
 
@@ -35,8 +30,6 @@ window.addEventListener('load', function () {
 function switchMode() {
     const element = document.body.classList;
     element.toggle("darkMode");
-    // Store the user's preference in localStorage
-    // localStorage.setItem('darkMode', element.contains('darkMode'));
     const header = document.querySelector('header').classList
     header.toggle('darkHeader')
 
@@ -60,26 +53,16 @@ function switchIcon() {
 function switchList() {
     const element = document.getElementById('barArea').classList;
     element.toggle("barAreaListView");
-    // Store the user's preference in localStorage
-    // localStorage.setItem('darkMode', element.contains('darkMode'));
     const lists = document.querySelectorAll('li');
     lists.forEach(list => { list.classList.toggle('progressLength'); });
-
     const moreText = document.getElementById('moreText').classList
     moreText.toggle('moreText')
-
 }
 
 function logoRotate() {
     const logo = document.getElementById('logo').classList;
     logo.toggle("logo-rotate")
 }
-
-
-
-
-
-
 
 function sortByDes() {
     const ul = document.getElementById('barArea');
@@ -110,7 +93,6 @@ function sortByAsc() {
 
 }
 
-
 function searchCoin() {
     const searchInput = document.getElementById('searchInput');
     const listItems = document.querySelectorAll('.progress');
@@ -124,13 +106,11 @@ function searchCoin() {
 
             } else {
                 item.style.display = 'none';
-
             }
         });
     });
 
 }
-
 
 
 function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, priceID, percentID, athID, coinName) {
@@ -159,61 +139,86 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
 
 
 function btcPrice() {
-    fetchCryptoPrice('bitcoin', 'btcIcon', 'btc-status-bar', 'btc-status-bar-fill', 'btc-status-price', 'btc-percent', 'btcAth', 'btcName');
+    fetchCryptoPrice('bitcoin', 'btc-Icon', 'btc-status-bar', 'btc-status-bar-fill', 'btc-price', 'btc-percent', 'btc-Ath', 'btc-Name');
 }
 
 function ethPrice() {
-    fetchCryptoPrice('ethereum', 'ethIcon', 'eth-status-bar', 'eth-status-bar-fill', 'eth-status-price', 'eth-percent', 'ethAth', 'ethName');
+    fetchCryptoPrice('ethereum', 'eth-Icon', 'eth-status-bar', 'eth-status-bar-fill', 'eth-price', 'eth-percent', 'eth-Ath', 'eth-Name');
 }
 
 function bnbPrice() {
-    fetchCryptoPrice('binancecoin', 'bnbIcon', 'bnb-status-bar', 'bnb-status-bar-fill', 'bnb-status-price', 'bnb-percent', 'bnbAth', 'bnbName');
+    fetchCryptoPrice('binancecoin', 'bnb-Icon', 'bnb-status-bar', 'bnb-status-bar-fill', 'bnb-price', 'bnb-percent', 'bnb-Ath', 'bnb-Name');
 }
 
 function xrpPrice() {
-    fetchCryptoPrice('ripple', 'xrpIcon', 'xrp-status-bar', 'xrp-status-bar-fill', 'xrp-status-price', 'xrp-percent', 'xrpAth', 'xrpName');
+    fetchCryptoPrice('ripple', 'xrp-Icon', 'xrp-status-bar', 'xrp-status-bar-fill', 'xrp-price', 'xrp-percent', 'xrp-Ath', 'xrp-Name');
 }
 
 function dogePrice() {
-    fetchCryptoPrice('dogecoin', 'dogeIcon', 'doge-status-bar', 'doge-status-bar-fill', 'doge-status-price', 'doge-percent', 'dogeAth', 'dogeName');
+    fetchCryptoPrice('dogecoin', 'doge-Icon', 'doge-status-bar', 'doge-status-bar-fill', 'doge-price', 'doge-percent', 'doge-Ath', 'doge-Name');
 }
 
 function adaPrice() {
-    fetchCryptoPrice('cardano', 'adaIcon', 'ada-status-bar', 'ada-status-bar-fill', 'ada-status-price', 'ada-percent', 'adaAth', 'adaName');
+    fetchCryptoPrice('cardano', 'ada-Icon', 'ada-status-bar', 'ada-status-bar-fill', 'ada-price', 'ada-percent', 'ada-Ath', 'ada-Name');
 }
 
 function solPrice() {
-    fetchCryptoPrice('solana', 'solIcon', 'sol-status-bar', 'sol-status-bar-fill', 'sol-status-price', 'sol-percent', 'solAth', 'solName');
+    fetchCryptoPrice('solana', 'sol-Icon', 'sol-status-bar', 'sol-status-bar-fill', 'sol-price', 'sol-percent', 'sol-Ath', 'sol-Name');
 }
 
 function shibPrice() {
-    fetchCryptoPrice('shiba-inu', 'shibIcon', 'shib-status-bar', 'shib-status-bar-fill', 'shib-status-price', 'shib-percent', 'shibAth', 'shibName');
+    fetchCryptoPrice('shiba-inu', 'shib-Icon', 'shib-status-bar', 'shib-status-bar-fill', 'shib-price', 'shib-percent', 'shib-Ath', 'shib-Name');
 }
 
 function maticPrice() {
-    fetchCryptoPrice('matic-network', 'maticIcon', 'matic-status-bar', 'matic-status-bar-fill', 'matic-status-price', 'matic-percent', 'maticAth', 'maticName');
+    fetchCryptoPrice('matic-network', 'matic-Icon', 'matic-status-bar', 'matic-status-bar-fill', 'matic-price', 'matic-percent', 'matic-Ath', 'matic-Name');
 }
 
 function ltcPrice() {
-    fetchCryptoPrice('litecoin', 'ltcIcon', 'ltc-status-bar', 'ltc-status-bar-fill', 'ltc-status-price', 'ltc-percent', 'ltcAth', 'ltcName');
+    fetchCryptoPrice('litecoin', 'ltc-Icon', 'ltc-status-bar', 'ltc-status-bar-fill', 'ltc-price', 'ltc-percent', 'ltc-Ath', 'ltc-Name');
 }
 
 function dotPrice() {
-    fetchCryptoPrice('polkadot', 'dotIcon', 'dot-status-bar', 'dot-status-bar-fill', 'dot-status-price', 'dot-percent', 'dotAth', 'dotName');
+    fetchCryptoPrice('polkadot', 'dot-Icon', 'dot-status-bar', 'dot-status-bar-fill', 'dot-price', 'dot-percent', 'dot-Ath', 'dot-Name');
 }
 
 function avaxPrice() {
-    fetchCryptoPrice('avalanche-2', 'avaxIcon', 'avax-status-bar', 'avax-status-bar-fill', 'avax-status-price', 'avax-percent', 'avaxAth', 'avaxName');
+    fetchCryptoPrice('avalanche-2', 'avax-Icon', 'avax-status-bar', 'avax-status-bar-fill', 'avax-price', 'avax-percent', 'avax-Ath', 'avax-Name');
 }
 
 function arbPrice() {
-    fetchCryptoPrice('arbitrum', 'arbIcon', 'arb-status-bar', 'arb-status-bar-fill', 'arb-status-price', 'arb-percent', 'arbAth', 'arbName');
+    fetchCryptoPrice('arbitrum', 'arb-Icon', 'arb-status-bar', 'arb-status-bar-fill', 'arb-price', 'arb-percent', 'arb-Ath', 'arb-Name');
 }
 
 function opPrice() {
-    fetchCryptoPrice('optimism', 'opIcon', 'op-status-bar', 'op-status-bar-fill', 'op-status-price', 'op-percent', 'opAth', 'opName');
+    fetchCryptoPrice('optimism', 'op-Icon', 'op-status-bar', 'op-status-bar-fill', 'op-price', 'op-percent', 'op-Ath', 'op-Name');
 }
 
 function astrPrice() {
-    fetchCryptoPrice('astar', 'astrIcon', 'astr-status-bar', 'astr-status-bar-fill', 'astr-status-price', 'astr-percent', 'astrAth', 'astrName');
+    fetchCryptoPrice('astar', 'astr-Icon', 'astr-status-bar', 'astr-status-bar-fill', 'astr-price', 'astr-percent', 'astr-Ath', 'astr-Name');
+}
+
+function trxPrice() {
+    fetchCryptoPrice('tron', 'trx-Icon', 'trx-status-bar', 'trx-status-bar-fill', 'trx-price', 'trx-percent', 'trx-Ath', 'trx-Name');
+}
+
+function uniPrice() {
+    fetchCryptoPrice('uniswap', 'uni-Icon', 'uni-status-bar', 'uni-status-bar-fill', 'uni-price', 'uni-percent', 'uni-Ath', 'uni-Name');
+}
+function linkPrice() {
+    fetchCryptoPrice('chainlink', 'link-Icon', 'link-status-bar', 'link-status-bar-fill', 'link-price', 'link-percent', 'link-Ath', 'link-Name');
+}
+
+function atomPrice() {
+    fetchCryptoPrice('cosmos', 'atom-Icon', 'atom-status-bar', 'atom-status-bar-fill', 'atom-price', 'atom-percent', 'atom-Ath', 'atom-Name');
+}
+
+function etcPrice() {
+    fetchCryptoPrice('ethereum-classic', 'etc-Icon', 'etc-status-bar', 'etc-status-bar-fill', 'etc-price', 'etc-percent', 'etc-Ath', 'etc-Name');
+}
+function etcPrice() {
+    fetchCryptoPrice('ethereum-classic', 'etc-Icon', 'etc-status-bar', 'etc-status-bar-fill', 'etc-price', 'etc-percent', 'etc-Ath', 'etc-Name');
+}
+function xmrPrice() {
+    fetchCryptoPrice('monero', 'xmr-Icon', 'xmr-status-bar', 'xmr-status-bar-fill', 'xmr-price', 'xmr-percent', 'xmr-Ath', 'xmr-Name');
 }
