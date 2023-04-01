@@ -17,13 +17,18 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: inherit;
+    background-color: #282a36;
     z-index: 1;
 }
 
 
 
 .darkMode {
+    color: #44475a;
+    background-color: #f8f8f2;
+}
+
+.darkHeader {
     color: #44475a;
     background-color: #f8f8f2;
 }

@@ -36,7 +36,8 @@ function switchMode() {
     element.toggle("darkMode");
     // Store the user's preference in localStorage
     // localStorage.setItem('darkMode', element.contains('darkMode'));
-
+    const header = document.querySelector('header').classList
+    header.toggle('darkHeader')
 
 }
 
