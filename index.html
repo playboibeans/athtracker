@@ -28,16 +28,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h3 style="font-size: 40px; margin:15px auto 15px 15px;">CAT</h3>
+        <h3 style="font-size: 40px; margin:15px auto 15px 15px;"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">CAT</h3>
         <input type="text" id="searchInput" placeholder="Search...">
         <img src="switch.png" onclick="switchMode(); switchIcon();" alt="light mode switch" id="darkmodeSwitch"
             style="height: 20px; width: 20px; margin:17.75px">
     </header>
-    <div class="hero">
+    <div id="hero" class="hero">
         <div>
             <img src="logo.webp" onclick="logoRotate()" alt="Crypto ATH Tracker logo" id="logo"
                 style="height: 69px; width: 69px;">
@@ -309,12 +312,19 @@
                 </div>
             </div>
         </li>
-        <li id="moreToCome" class="progress" style="justify-content: center;">
-            <h2 id="moreText" style="margin: 0;">More to come...</h2>
+        <li id="moreToCome" class="progress" style="justify-content: center;"><a style="text-decoration: none;"
+                href="https://forms.gle/oDhL1dBa2UVPaQoBA" target="_blank">
+                <h2 id="moreText" style="margin: 0;  ">More to
+                    come...<br><span style="font-size: 16px;">Click here to submit coins</span>
+                </h2>
+            </a>
         </li>
 
 
+
+
     </ul>
+
     <footer>@19798eth<br>Data provided by <a href=" https://www.coingecko.com/" target="_blank">CoinGecko</a> | Color
         Palatte inspired by
         <a href="https://draculatheme.com" target="_blank">Dracula</a>
