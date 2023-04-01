@@ -76,14 +76,72 @@ function logoRotate() {
 }
 
 
+
+
+
+
+
+function sortByDes() {
+    const ul = document.getElementById('barArea');
+    const removes = document.getElementById('moreToCome')
+    ul.removeChild(removes)
+    const lis = Array.from(ul.querySelectorAll('.progress'));
+    lis.sort((a, b) => {
+        const aPercent = parseFloat(a.querySelector('.percent').textContent);
+        const bPercent = parseFloat(b.querySelector('.percent').textContent);
+        return bPercent - aPercent;
+    });
+    lis.forEach(li => ul.appendChild(li));
+    ul.appendChild(removes)
+}
+
+function sortByAsc() {
+    const ul = document.getElementById('barArea');
+    const removes = document.getElementById('moreToCome')
+    ul.removeChild(removes)
+    const lis = Array.from(ul.querySelectorAll('.progress'));
+    lis.sort((a, b) => {
+        const aPercent = parseFloat(a.querySelector('.percent').textContent);
+        const bPercent = parseFloat(b.querySelector('.percent').textContent);
+        return aPercent - bPercent;
+    });
+    lis.forEach(li => ul.appendChild(li));
+    ul.appendChild(removes)
+
+}
+
+
+function searchCoin() {
+    const searchInput = document.getElementById('searchInput');
+    const listItems = document.querySelectorAll('.progress');
+
+    searchInput.addEventListener('input', () => {
+        const searchText = searchInput.value.toLowerCase();
+        listItems.forEach(item => {
+            const coinName = item.id.toLowerCase();
+            if (coinName.includes(searchText)) {
+                item.style.display = 'block';
+
+            } else {
+                item.style.display = 'none';
+
+            }
+        });
+    });
+
+}
+
+
+
 function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, priceID, percentID, athID, coinName) {
-    axios.get(`https://api.coingecko.com/api/v3/coins/${coin}`)
-        .then((price) => {
-            const nameOfCoin = price.data.name;
+    fetch(`https://api.coingecko.com/api/v3/coins/${coin}`)
+        .then(response => response.json())
+        .then((data) => {
+            const nameOfCoin = data.name;
             document.getElementById(coinName).innerHTML = `${nameOfCoin}`;
-            const crypto = price.data.market_data.current_price.usd;
-            const crypto_ATH = price.data.market_data.ath.usd;
-            const icon = price.data.image.small;
+            const crypto = data.market_data.current_price.usd;
+            const crypto_ATH = data.market_data.ath.usd;
+            const icon = data.image.small;
             document.getElementById(iconID).src = icon;
             const athStatusBar = document.querySelector(`.${statusBarClass}`);
             const athStatusBarFill = athStatusBar.querySelector(`.${statusBarFillClass}`);
@@ -98,6 +156,7 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
             console.log(error);
         })
 }
+
 
 function btcPrice() {
     fetchCryptoPrice('bitcoin', 'btcIcon', 'btc-status-bar', 'btc-status-bar-fill', 'btc-status-price', 'btc-percent', 'btcAth', 'btcName');
@@ -158,71 +217,3 @@ function opPrice() {
 function astrPrice() {
     fetchCryptoPrice('astar', 'astrIcon', 'astr-status-bar', 'astr-status-bar-fill', 'astr-status-price', 'astr-percent', 'astrAth', 'astrName');
 }
-
-
-
-
-
-
-
-
-function sortByDes() {
-    const ul = document.getElementById('barArea');
-    const removes = document.getElementById('moreToCome')
-    ul.removeChild(removes)
-    const lis = Array.from(ul.querySelectorAll('.progress'));
-    lis.sort((a, b) => {
-        const aPercent = parseFloat(a.querySelector('.percent').textContent);
-        const bPercent = parseFloat(b.querySelector('.percent').textContent);
-        return bPercent - aPercent;
-    });
-    lis.forEach(li => ul.appendChild(li));
-    ul.appendChild(removes)
-}
-
-function sortByAsc() {
-    const ul = document.getElementById('barArea');
-    const removes = document.getElementById('moreToCome')
-    ul.removeChild(removes)
-    const lis = Array.from(ul.querySelectorAll('.progress'));
-    lis.sort((a, b) => {
-        const aPercent = parseFloat(a.querySelector('.percent').textContent);
-        const bPercent = parseFloat(b.querySelector('.percent').textContent);
-        return aPercent - bPercent;
-    });
-    lis.forEach(li => ul.appendChild(li));
-    ul.appendChild(removes)
-
-}
-
-// function reset() {
-//     alert('I actually do nothing.')
-// }
-
-
-function searchCoin() {
-    const searchInput = document.getElementById('searchInput');
-    const listItems = document.querySelectorAll('.progress');
-
-    searchInput.addEventListener('input', () => {
-        const searchText = searchInput.value.toLowerCase();
-        listItems.forEach(item => {
-            const coinName = item.id.toLowerCase();
-            if (coinName.includes(searchText)) {
-                item.style.display = 'block';
-
-            } else {
-                item.style.display = 'none';
-
-            }
-        });
-    });
-
-}
-
-
-
-// removes buttons
-// const body = document.body
-// const sort = document.querySelector('.sorts')
-// body.removeChild(sort)
