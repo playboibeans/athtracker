@@ -272,9 +272,20 @@ li {
 
 
 footer {
-    text-align: center;
     padding: 10px;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+}
+
+#footerText {
+    text-align: center;
+    margin: 10px;
+    max-width: 95%;
 }
 
 
