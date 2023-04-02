@@ -134,6 +134,7 @@ li {
     /* margin-bottom: 50px; */
     border: 5px solid #44475a;
     border-radius: 15px;
+    position: relative
 }
 
 .progressLength {
@@ -294,4 +295,30 @@ footer {
 a {
     /* text-decoration: none; */
     color: inherit;
+}
+
+
+li.progress:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    top: calc(0% - 100px);
+    left: calc(7%);
+}
+
+.tooltip {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: 3px solid #f8f8f2;
+    border-radius: 10px;
+    padding: 15px 10px;
+    z-index: 1;
+    width: max-content;
+    white-space: pre-wrap;
+    text-align: end;
 }
