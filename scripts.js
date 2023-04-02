@@ -56,7 +56,10 @@ function switchList() {
     const lists = document.querySelectorAll('li');
     lists.forEach(list => { list.classList.toggle('progressLength'); });
     const moreText = document.getElementById('moreText').classList
-    moreText.toggle('moreText')
+    moreText.toggle('moreText');
+    const tooltip = document.querySelectorAll('.tooltip');
+    tooltip.forEach(list => { list.classList.toggle('tooltipListView'); });
+
 }
 
 function logoRotate() {
