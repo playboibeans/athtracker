@@ -298,6 +298,10 @@ a {
 }
 
 
+li.progress:hover {
+    border-color: #ff79c6;
+}
+
 li.progress:hover .tooltip {
     visibility: visible;
     opacity: 1;
