@@ -1,4 +1,5 @@
 window.addEventListener('load', function () {
+    checkMode();
     btcPrice();
     ethPrice();
     bnbPrice();
@@ -25,29 +26,50 @@ window.addEventListener('load', function () {
 
 
 
-
-
 function switchMode() {
     const element = document.body.classList;
     element.toggle("darkMode");
     const header = document.querySelector('header').classList
     header.toggle('darkHeader')
+    const bar = document.querySelectorAll('.statusBar');
+    bar.forEach(barColor => { barColor.classList.toggle('statusBarLight') })
+    const list = document.querySelectorAll('.progress');
+    list.forEach(borderColor => { borderColor.classList.toggle('progressLight') })
+    const button = document.querySelectorAll('.sortButtons');
+    button.forEach(buttonBorder => { buttonBorder.classList.toggle('sortButtonsLight') })
+    if (element.contains('darkMode')) {
+        localStorage.setItem('mode', 'dark');
+    } else {
+        localStorage.setItem('mode', 'light');
+    };
 
-}
-
-function switchIcon() {
     const switchImg = document.getElementById("darkmodeSwitch");
     const currentSrc = switchImg.getAttribute("src");
-
     if (currentSrc.endsWith("switch.png")) {
         switchImg.setAttribute("src", "light.png");
     } else {
         switchImg.setAttribute("src", "switch.png");
     }
-
-    localStorage.setItem('darkmodeSwitch', element.contains('darkmodeSwitch'));
 }
 
+function checkMode() {
+    const storedMode = localStorage.getItem('mode');
+    if (storedMode === 'dark') {
+        document.body.classList.add('darkMode');
+        document.querySelector('header').classList.add('darkHeader');
+        document.querySelectorAll('.statusBar').forEach(barColor => { barColor.classList.add('statusBarLight') });
+        document.querySelectorAll('.progress').forEach(borderColor => { borderColor.classList.add('progressLight') });
+        document.querySelectorAll('.sortButtons').forEach(buttonBorder => { buttonBorder.classList.add('sortButtonsLight') });
+        document.getElementById("darkmodeSwitch").setAttribute("src", "light.png");
+    } else {
+        document.body.classList.remove('darkMode');
+        document.querySelector('header').classList.remove('darkHeader');
+        document.querySelectorAll('.statusBar').forEach(barColor => { barColor.classList.remove('statusBarLight') });
+        document.querySelectorAll('.progress').forEach(borderColor => { borderColor.classList.remove('progressLight') });
+        document.querySelectorAll('.sortButtons').forEach(buttonBorder => { buttonBorder.classList.remove('sortButtonsLight') });
+        document.getElementById("darkmodeSwitch").setAttribute("src", "switch.png");
+    }
+}
 
 
 function switchList() {
