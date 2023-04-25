@@ -21,6 +21,8 @@ window.addEventListener('load', function () {
     atomPrice();
     etcPrice();
     xmrPrice();
+    pepePrice();
+    flokiPrice();
     searchCoin();
 });
 
@@ -152,9 +154,9 @@ function fetchCryptoPrice(coin, iconID, statusBarClass, statusBarFillClass, pric
             const athStatusBarFill = athStatusBar.querySelector(`.${statusBarFillClass}`);
             const athPercentComplete = crypto / crypto_ATH;
             const athPercentString = `${(athPercentComplete * 100).toFixed(2)}% `;
-            document.getElementById(priceID).innerHTML = `$${crypto.toLocaleString()}`;
+            document.getElementById(priceID).innerHTML = `$${crypto}`;
             document.getElementById(percentID).innerHTML = `${(athPercentComplete * 100).toFixed(2)}%`;
-            document.getElementById(athID).innerHTML = `ATH:$${crypto_ATH.toLocaleString()} `;
+            document.getElementById(athID).innerHTML = `ATH:$${crypto_ATH} `;
             athStatusBarFill.style.width = athPercentString;
             const marketcap = data.market_data.market_cap.usd;
             const change24h = data.market_data.price_change_percentage_24h
@@ -250,4 +252,12 @@ function etcPrice() {
 
 function xmrPrice() {
     fetchCryptoPrice('monero', 'xmr-Icon', 'xmr-status-bar', 'xmr-status-bar-fill', 'xmr-price', 'xmr-percent', 'xmr-Ath', 'xmr-Name', 'xmr-tooltip');
+}
+
+function pepePrice() {
+    fetchCryptoPrice('pepe', 'pepe-Icon', 'pepe-status-bar', 'pepe-status-bar-fill', 'pepe-price', 'pepe-percent', 'pepe-Ath', 'pepe-Name', 'pepe-tooltip');
+}
+
+function flokiPrice() {
+    fetchCryptoPrice('floki', 'floki-Icon', 'floki-status-bar', 'floki-status-bar-fill', 'floki-price', 'floki-percent', 'floki-Ath', 'floki-Name', 'floki-tooltip');
 }
