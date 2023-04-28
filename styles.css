@@ -391,3 +391,7 @@ li.progress:hover .tooltipListView {
     top: calc(105%);
     left: calc(0%);
 }
+
+.hidden {
+    display: none;
+}
