@@ -23,6 +23,7 @@ window.addEventListener('load', function () {
     xmrPrice();
     pepePrice();
     flokiPrice();
+    stgPrice();
     searchCoin();
 });
 
@@ -260,4 +261,8 @@ function pepePrice() {
 
 function flokiPrice() {
     fetchCryptoPrice('floki', 'floki-Icon', 'floki-status-bar', 'floki-status-bar-fill', 'floki-price', 'floki-percent', 'floki-Ath', 'floki-Name', 'floki-tooltip');
+}
+
+function stgPrice() {
+    fetchCryptoPrice('stargate-finance', 'stg-Icon', 'stg-status-bar', 'stg-status-bar-fill', 'stg-price', 'stg-percent', 'stg-Ath', 'stg-Name', 'stg-tooltip');
 }
