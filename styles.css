@@ -342,7 +342,7 @@ li.progress:hover {
     border-color: #ff79c6;
 }
 
-li.progress:hover .tooltip {
+li.progress:active .tooltip {
     visibility: visible;
     opacity: 1;
     top: calc(0% - 100px);
@@ -385,7 +385,7 @@ li.progress:hover .tooltip {
     text-align: end;
 }
 
-li.progress:hover .tooltipListView {
+li.progress:active .tooltipListView {
     visibility: visible;
     opacity: 1;
     top: calc(105%);
